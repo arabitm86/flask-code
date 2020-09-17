@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: flask-blog
+    namespace: default
+    labels:
+        app: flaskcode
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+          app: flaskcode
+    template:
+        metadata: 
+            labels: 
+                app: flaskcode
+        spec:
+          containers:
+            - name: flask-blog-c
+              image: arabitm86/flaskcode:0.2
