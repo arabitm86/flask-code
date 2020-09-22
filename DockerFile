@@ -1,5 +1,8 @@
 FROM python:3.8.5-alpine3.11
 WORKDIR /flask-code
-ADD . /flask-code
+ADD ./blog /flask-code/blog
+ADD ./static /flask-code/static
+ADD ./templates /flask-code/templates
+ADD requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-CMD ["python","app.py"]
+CMD ["python","./blog/app.py"]
