@@ -17,4 +17,4 @@ spec:
         spec:
           containers:
             - name: flask-blog-c
-              image: arabitm86/flaskcode:0.2
+              image: arabitm86/flaskcode:0.3
